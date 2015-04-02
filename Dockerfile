@@ -20,7 +20,7 @@ RUN apt-get update && \
                        libreadline6-dev \
                        libssl-dev \
                        libyaml-dev \
-                       # openjdk-7-jdk \
+                       openjdk-7-jre-headless \
                        zlib1g-dev \
                        && \
     apt-get clean
