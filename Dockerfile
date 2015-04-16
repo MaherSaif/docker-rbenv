@@ -1,4 +1,4 @@
-FROM ubuntu:trusty
+FROM ubuntu:14.04.2
 MAINTAINER vad.viktor@gmail.com
 
 #
@@ -27,4 +27,3 @@ RUN apt-get update && \
 COPY rbenv-setup.sh /
 RUN sh /rbenv-setup.sh
 RUN rm -f /rbenv-setup.sh
-
