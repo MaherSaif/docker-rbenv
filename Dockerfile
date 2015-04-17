@@ -1,9 +1,8 @@
 FROM ubuntu:14.04.2
 MAINTAINER vad.viktor@gmail.com
 
-#
-# BUMP RUBY VERSION IN rbenv-setup.sh
-#
+# use rbenv understandable version
+ENV RUBYVERSION jruby-1.7.4
 
 # add packages as required
 RUN apt-get update && \
@@ -19,11 +18,12 @@ RUN apt-get update && \
                        libreadline6-dev \
                        libssl-dev \
                        libyaml-dev \
-                       #openjdk-7-jre-headless \
+                       # remove jdk unless building jruby
+                       openjdk-7-jre-headless \ 
                        zlib1g-dev \
                        && \
     apt-get clean
 
 COPY rbenv-setup.sh /
-RUN sh /rbenv-setup.sh
+RUN bash /rbenv-setup.sh $RUBYVERSION
 RUN rm -f /rbenv-setup.sh
