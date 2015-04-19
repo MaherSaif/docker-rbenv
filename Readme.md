@@ -3,9 +3,10 @@
 Sample for using it in your own image:
 
 ```
-FROM vadviktor/mri:2.2.1
+FROM rbenv-image-you-build-from-this
 MAINTAINER whoami@gmail.com
 
+RUN mkdir -p /app
 COPY . /app
 WORKDIR /app
 
