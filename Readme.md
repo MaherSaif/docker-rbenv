@@ -10,8 +10,10 @@ RUN mkdir -p /app
 COPY . /app
 WORKDIR /app
 
-RUN bundle install && \
-    gem install passenger && \
+RUN export PATH="/root/.rbenv/bin:$PATH" && \ # MUST
+    eval "$(rbenv init -)" && \ # MUST
+    bundle install && \
+    gem install whatever gems you like && \
     rbenv rehash && \
     rake whatever
 

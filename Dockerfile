@@ -2,7 +2,8 @@ FROM ubuntu:14.04.2
 MAINTAINER vad.viktor@gmail.com
 
 # use rbenv understandable version
-ENV RUBYVERSION jruby-1.7.4
+#ENV RUBYVERSION jruby-1.7.4
+ENV RUBYVERSION 2.1.6
 
 # add packages as required
 RUN apt-get update && \
@@ -19,7 +20,7 @@ RUN apt-get update && \
                        libssl-dev \
                        libyaml-dev \
                        # remove jdk unless building jruby
-                       openjdk-7-jre-headless \ 
+                       #openjdk-7-jre-headless \
                        zlib1g-dev \
                        && \
     apt-get clean
