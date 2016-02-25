@@ -1,7 +1,7 @@
 #!/bin/bash
 
-git clone https://github.com/sstephenson/rbenv.git /root/.rbenv && \
-git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build && \
+git clone --depth 1 https://github.com/sstephenson/rbenv.git /root/.rbenv && \
+git clone --depth 1 https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build && \
 rm -rfv /root/.rbenv/plugins/ruby-build/.git && \
 rm -rfv /root/.rbenv/.git && \
 export PATH="/root/.rbenv/bin:$PATH" && \

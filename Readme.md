@@ -3,7 +3,7 @@
 Sample for using it in your own image:
 
 ```
-FROM rbenv-image-you-build-from-this
+FROM vadviktor/mri:2.3.0
 MAINTAINER whoami@gmail.com
 
 RUN mkdir -p /app
