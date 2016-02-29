@@ -21,5 +21,3 @@ EXPOSE 3000
 
 ENTRYPOINT ["/app/startup.sh"]
 ```
-
-> Written with [StackEdit](https://stackedit.io/).
