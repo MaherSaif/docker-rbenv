@@ -16,7 +16,7 @@ apt-get install -y autoconf \
                    libyaml-dev \
                    zlib1g-dev
 
-if [[ "$1" == "jruby*" ]] ; then
+if [[ $1 == jruby* ]] ; then
   apt-get install -y openjdk-7-jre-headless
 fi
 
