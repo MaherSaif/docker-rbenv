@@ -1,7 +1,6 @@
 Ubuntu LTS Trusty (14.04) based image with [rbenv](https://github.com/sstephenson/rbenv) and it's [ruby-build](https://github.com/rbenv/ruby-build) plugin.
 
-Build exaples
----
+# Build exaples
 
 To build an MRI:
 
@@ -11,8 +10,7 @@ To build a jRuby:
 
 `docker build --build-arg RUBY_VERSION=jruby-1.7.18 --rm --tag=some-name/jruby:0.0.1 .`
 
-Usage example
----
+# Usage example as an app
 
 ```
 FROM vadviktor/mri:2.3.0
@@ -32,3 +30,9 @@ EXPOSE 3000
 
 ENTRYPOINT ["/app/startup.sh"]
 ```
+
+# Usage example as a single script
+
+In this example we are running a minitest suite.
+
+`docker run -it --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp vadviktor/mri:2.3.1 sh /init.sh && ruby -Ilib:test test/test_my_cool_app.rb`
