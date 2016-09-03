@@ -2,11 +2,11 @@ Ubuntu LTS Trusty (14.04) based image with [rbenv](https://github.com/sstephenso
 
 # Build exaples
 
-To build an MRI:
+## To build an MRI:
 
 `docker build --build-arg RUBY_VERSION=2.3.0 --rm --tag=some-name/mri:0.0.1 .`
 
-To build a jRuby:
+## To build a jRuby:
 
 `docker build --build-arg RUBY_VERSION=jruby-1.7.18 --rm --tag=some-name/jruby:0.0.1 .`
 
@@ -29,6 +29,16 @@ RUN . /init.sh && \ #MUST
 EXPOSE 3000
 
 ENTRYPOINT ["/app/startup.sh"]
+```
+
+`startup.sh` example:
+
+```
+#!/usr/bin/env bash
+
+export PATH="/root/.rbenv/bin:$PATH" && \
+eval "$(rbenv init -)" && \
+exec bundle exec thin -e production -p 3000 start
 ```
 
 # Usage example as a single script
