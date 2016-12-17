@@ -1,4 +1,4 @@
-[![](https://images.microbadger.com/badges/version/vadviktor/mri.svg)](https://microbadger.com/images/vadviktor/mri "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/vadviktor/mri.svg)](https://microbadger.com/images/vadviktor/mri "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/vadviktor/mri.svg)](https://microbadger.com/images/vadviktor/mri "Get your own image badge on microbadger.com")
 
 Ubuntu LTS Trusty (14.04) based image with [rbenv](https://github.com/sstephenson/rbenv) and it's [ruby-build](https://github.com/rbenv/ruby-build) plugin.
 
