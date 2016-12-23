@@ -1,9 +1,9 @@
-FROM ubuntu:trusty
+FROM ubuntu:xenial
 MAINTAINER vad.viktor@gmail.com
 
 # use rbenv understandable version
 ARG RUBY_VERSION
-ENV RUBY_VERSION=${RUBY_VERSION:-2.3.0}
+ENV RUBY_VERSION=${RUBY_VERSION:-2.3.3}
 
 COPY scripts/package-setup.sh /
 RUN /package-setup.sh $RUBY_VERSION
