@@ -17,7 +17,7 @@ apt-get install -y autoconf \
                    zlib1g-dev
 
 if [[ $1 == jruby* ]] ; then
-  apt-get install -y openjdk-7-jre-headless
+  apt-get install -y openjdk-8-jre-headless
 fi
 
 apt-get autoremove -y && \

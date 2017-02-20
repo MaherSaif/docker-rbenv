@@ -9,11 +9,11 @@ Ubuntu LTS Xenial (16.04) based image with [rbenv](https://github.com/sstephenso
 
 ## To build an MRI:
 
-`docker build --build-arg RUBY_VERSION=2.3.3 --rm --tag=some-name/mri:0.0.1 .`
+`docker build --no-cache --build-arg RUBY_VERSION=2.3.3 --rm --force-rm --tag=some-name/mri:0.0.1 .`
 
 ## To build a jRuby:
 
-`docker build --build-arg RUBY_VERSION=jruby-9.1.6.0 --rm --tag=some-name/jruby:0.0.1 .`
+`docker build --no-cache --build-arg RUBY_VERSION=jruby-9.1.6.0 --rm --force-rm --tag=some-name/jruby:0.0.1 .`
 
 # Usage example as an app
 
