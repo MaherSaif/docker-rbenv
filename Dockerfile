@@ -1,4 +1,4 @@
-FROM blitznote/debootstrap-amd64:16.04
+FROM ubuntu:16.04
 MAINTAINER vad.viktor@gmail.com
 
 # use rbenv understandable version
